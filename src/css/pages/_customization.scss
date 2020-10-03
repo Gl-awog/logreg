@@ -1,0 +1,64 @@
+.mCustomScrollbar {
+    --scrollFadeH: 92px;
+
+    .mCSB_scrollTools .mCSB_draggerRail {
+        background: rgba(#3a3a3a, 0.15);
+        width: 2px;
+        border-radius: 2px;
+    }
+
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        width: 2px;
+        border-radius: 2px;
+        background: rgba(#545454, 0.8);
+    }
+
+    .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+        width: 100%;
+        height: 2px;
+    }
+
+    .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+        height: 2px;
+        width: 100%;
+    }
+
+    // @include breakpoint(desktop) {
+    //     .mCustomScrollBox {
+    //         transition: mask-position 0.8s ease;
+    //         // mask-image:linear-gradient(to bottom,red 0px, red calc(100% - var(--scrollFadeH)), transparent 100%), linear-gradient(to bottom,transparent 0px, blue var(--scrollFadeH), blue 100%);
+    //         mask-image: linear-gradient(to bottom, black 0px, black calc(100% - var(--scrollFadeH)), transparent 100%);
+    //         mask-position: 0 100%;
+    //         mask-repeat: no-repeat;
+    //         // mask-size:100% calc(100% - var(--scrollFadeH));
+    //     }
+    // }
+
+    // &.unMasked {
+    //     .mCustomScrollBox {
+    //         mask-position: 0 calc(100% + var(--scrollFadeH)),0 -var(--scrollFadeH);
+
+    //     }
+    // }
+
+    // &.topMasked {
+    //     .mCustomScrollBox {
+    //         mask-position: 0 calc(100% + var(--scrollFadeH)),0 0px;
+    //     }
+    // }
+
+    // &.bothMasked {
+    //     .mCustomScrollBox {                
+    //         mask-position: 0 100%,0 0px;                    
+    //     }
+    // }
+
+    @include breakpoint(mobile) {
+
+        .mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal,
+        .mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+            bottom: -12px;
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/utils';
+@import 'base/general';
+
+// @import 'vendor/aos';
+@import 'vendor/jquery.mCustomScrollbar_custom';
+
+@import 'components/icon';
+@import 'components/btn';
+// @import 'components/socials';
+@import 'components/input';
+@import 'components/popup';
+
+@import 'layout/page';
+@import 'layout/header';
+// @import 'layout/nav';
+@import 'layout/footer';
+@import 'layout/main';
+
+@import 'pages/customization';
+@import 'pages/section';
+
+

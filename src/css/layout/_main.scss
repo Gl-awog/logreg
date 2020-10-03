@@ -1,0 +1,235 @@
+.main {
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+
+    &__bg {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+
+        &.lights {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url("../images/bg_light_top.png"), url("../images/bg_light_left.png"), url("../images/bg_light_right.png");
+            background-position: 50% 0, 0 0, 100% 0;
+            background-repeat: repeat-x, repeat-y, repeat-y;
+            background-size: calc(1835 / var(--maxWidth) * 100%) auto, calc(158 / var(--maxWidth) * 100%) auto, calc(176 / var(--maxWidth) * 100%) auto;
+            mix-blend-mode: lighten;
+        }
+
+        &.branch-top {
+            height: 488px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 283, 483);
+            top: 0;
+            left: 0;
+            background-image: url("../images/bg_tree_left.png");
+        }
+
+        &.branch-bottom {
+            height: 439px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 272, 472);
+            bottom: 0;
+            right: 0;
+            background-image: url("../images/bg_tree_right.png");
+            background-position: 100% 100%;
+        }
+
+        &.snowflake-top {
+            height: 453px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 247, 547);
+            top: 0;
+            right: 0;
+            background-image: url("../images/bg_snowflake_top.png");
+        }
+
+        &.snowflake-bottom {
+            height: 373px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 207, 507);
+            bottom: 0;
+            left: 0;
+            background-image: url("../images/bg_snowflake_bottom.png");
+            background-position: 0 100%;
+        }
+
+        &.cone {
+            height: 139px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 130, 192);
+            top: 0;
+            left: calc(644 / var(--maxWidth) * 100%);
+            background-image: url("../images/bg_cone.png");
+            background-position: 0 0;
+        }
+
+        &.gift-top {
+            height: 569px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 350, 550);
+            top: calc((-569 + 312)/var(--maxWidth) * 100%);
+            left: calc((-550 + 380)/var(--maxWidth) * 100%);
+            background-image: url("../images/bg_gift_top.png");
+            background-position: 0 0;
+        }
+
+        &.gift-bottom {
+            height: 667px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 348, 648);
+            bottom: calc((-667 + 334)/var(--maxWidth) * 100%);
+            right: calc((-648 + 404)/var(--maxWidth) * 100%);
+            background-image: url("../images/bg_gift_bottom.png");
+            background-position: 0 100%;
+        }
+
+        &.ball-top {
+            height: 464px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 240, 483);
+            // top: calc((-464 + 381)/var(--maxWidth) * 100%);
+            top: calc((-464 + 381) * 1px);
+            right: 0;
+            background-image: url("../images/bg_ball_top.png");
+            background-position: 0 0;
+        }
+
+        &.ball-bottom {
+            height: 438px;
+            width: 100%;
+            @include fluidProperty5k(max-width, 230, 460);
+            bottom: calc((-438 + 164) * 1px);
+            left: 0;
+            background-image: url("../images/bg_ball_bottom.png");
+            background-position: 0 0;
+        }
+
+        &-18 {
+            background:url("../images/18plus.svg") no-repeat 0 0;           
+            display:block;
+            width:32px;
+            height:32px;
+            bottom:50%;
+            right:50%; 
+            @include fluidProperty5k(margin-right, 60, 120);  
+            @include fluidProperty5k(margin-bottom, -170, -40);                     
+            position: absolute;
+        }
+
+    }
+
+    @include breakpoint(5k) {
+        &__bg {
+            &.lights {
+                background-size: auto auto;
+            }
+
+            &.gift-top {
+                top: calc((-569 + 432) * 1px);
+                left: calc((-550 + 385) * 1px);
+            }
+
+            &.gift-bottom {
+                bottom: calc((-667 + 464) * 1px);
+                right: calc((-648 + 404) * 1px);
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        height: auto;
+        min-height: 100vh;
+        
+
+        &__bg {
+
+            &.lights {
+                max-width: none;
+                background-image: none;
+            }
+
+            &.branch-top {
+                width: 224px;
+                height: 198px;
+                max-width: none;
+                background-position: 0 100%
+            }
+
+            &.branch-bottom {
+                max-width: none;
+                width: 170px;
+                height: 160px;
+            }
+
+            &.snowflake-top {
+                width: 170px;
+                height: 189px;
+                max-width: none;
+                background-position: 0 0;
+            }
+
+            &.snowflake-bottom {
+                max-width: none;
+                width: 179px;
+                height: 136px;
+                left: 0;
+                bottom: 0;
+            }
+
+            &.cone {
+                max-width: none;
+                width: 86px;
+                height: 89px;
+                left:calc(131/375 * 100%);               
+            }
+
+            &.gift-top {
+                max-width: none;
+                width: 201px;
+                height: 201px;
+                top: -55px;
+                left: -37px;
+            }
+
+            &.gift-bottom {
+                max-width: none;
+                width: 156px;
+                height: 186px;                
+                right: 0px;
+                bottom: 0px;
+                background-size: 200px auto;
+                background-position: 20px 40px;
+            }
+
+            &.ball-top {
+                width: 158px;
+                height: 151px;
+                top: -15px;
+                right: -30px;
+                max-width: none;
+            }
+
+            &.ball-bottom {
+                max-width: none;
+                width: 143px;
+                height: 71px;
+                bottom: 0px;
+                left: 0px;
+                background-size: 100% auto;
+            }
+
+            &-18 {
+                margin-right:0px;
+                margin-bottom:0px;
+                bottom:16px;
+                right:60px;
+            }
+        }
+    }
+}
