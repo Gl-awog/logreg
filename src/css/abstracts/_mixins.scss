@@ -26,11 +26,13 @@
 }
 
 @mixin font-main {
-    font-family: 'Lato', sans-serif;
+    // font-family: 'Lato', sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 @mixin font-header {
-    font-family: 'Gilroy', sans-serif;
+    // font-family: 'Gilroy', sans-serif;
+    font-family:Tahoma, sans-serif;
 }
 
 @mixin mobBtn {

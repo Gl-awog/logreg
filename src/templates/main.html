@@ -1,31 +1,20 @@
 <main class="main">
-    <div class="b-reg-wrapper">
-        <span class="i-reg"></span>
-        <a href="javascript:void(0)" class="b-reg-link js-modal-logreg-login">Вход</a>
-        <span class="b-reg-link-del">/</span>
-        <a href="javascript:void(0)" class="b-reg-link js-modal-logreg-reg">Регистрация</a>
-    </div>
-    <div  class="hidden-sm">
-        <h2>Регистрация</h2>
-        <a href="javascript:void(0)" class="firstlink js-glpopup-open"  data-targetpopup=".js-reg-popup-quick">1. Телефон / пароль</a><br>
-        
-        <br>
-        <h2>Авторизация</h2>
+    <div class="hidden-sm">
+        <a href="javascript:void(0)" class="firstlink js-glpopup-open" data-targetpopup=".js-reg-popup-quick">Регистрация</a><br>
         <a href="javascript:void(0)" class="js-glpopup-open" data-targetpopup=".js-login-popup">Вход</a><br>
-        <a href="javascript:void(0)" class="js-glpopup-open" data-targetpopup=".js-password-reminder-popup">Напомнить пароль шаг1</a><br>
+        <a href="javascript:void(0)" class="js-glpopup-open" data-targetpopup=".js-password-reminder-popup">Напомнить пароль</a><br>
     </div>
     <script>$(document).ready(function() { $(".firstlink").click(); });</script>
 </main>
-<div class="fader"></div>
-<div class="pop-up reg-pop-up js-reg-popup-quick" style="display: block;">
-    <div class="pop-up__layer">
-        <div class="pop-up__wrap">
-            <header class="pop-up__header">
-                <a href="javascript:void(0)" class="pop-up__close js-popup-close"><span class="icon close-btn"></span></a>
+<div class="popup js-reg-popup-quick" style="display: block;">
+    <div class="popup__layer">
+        <div class="popup__wrap">
+            <header class="popup__header">
+                <a href="javascript:void(0)" class="popup__close js-popup-close"><span class="icon close-btn"></span></a>
             </header>
-            <section class="pop-up__body">
-                <div class="pop-up__title">Регистрация</div>
-                <form class="reg-pop-up__form" action="" method="POST">
+            <section class="popup__body">
+                <div class="popup__title">Регистрация</div>
+                <form action="" method="POST">
                     <div class="form-group">
                         <div class="control-input__group">
                             <input type="text" id="reg_login_input" class="control-input control-input--tel error" autocomplete="off" name="client[phone]" placeholder="Номер телефона*" />
@@ -40,13 +29,13 @@
                             <span class="control-input__group-error control__error">Ошибка ввода информации</span>
                         </div>
                     </div>
-                    <!--    <div class="form-group">
+                    <div class="form-group">
                         <div class="control-input__group">
                             <input id="reg_email_input" type="email" autocomplete="off" name="client[email]" class="control-input" placeholder="E-mail" />
                             <label class="control-input__group-label" for="reg_email_input" data-content="Email">Email</label>
                             <span class="control-input__group-error control__error">Ошибка ввода информации</span>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="form-group">
                         <div class="control-input__group">
                             <input id="reg_promo_input" type="text" autocomplete="off" name="promo" class="control-input" placeholder="Промокод" />
@@ -70,25 +59,25 @@
                         <div class="error_label control__error">Accept the terms</div>
                     </div>
                     <div class="form-group form-group--btns">
-                        <button id="button_reg" type="submit" class="btn btn--primary btn--big js-glpopup-open" data-targetpopup=".js-reg-popup-sms">Далее</button>
+                        <button id="button_reg" type="submit" class="btn btn--primary btn--big btn--w100 js-glpopup-open" data-targetpopup=".js-reg-popup-sms">Далее</button>
                     </div>
                 </form>
-                <div class="pop-up__note reg-pop-up__note">
-                    <p class="darkgrey textsmall">Уже есть аккаунт? <a href="javascript:void(0)" class="js-glpopup-open" data-targetpopup=".js-login-popup">Войти</a></p>
+                <div class="popup__note">
+                    <p class="grey4 textsmall">Уже есть аккаунт? <a href="javascript:void(0)" class="js-glpopup-open darkgrey" data-targetpopup=".js-login-popup">Войти</a></p>
                 </div>
             </section>
         </div>
     </div>
 </div>
-<div class="pop-up reg-pop-up js-login-popup">
-    <div class="pop-up__layer">
-        <div class="pop-up__wrap">
-            <header class="pop-up__header">
-                <a href="javascript:void(0)" class="pop-up__close js-popup-close"><span class="icon close-btn"></span></a>
+<div class="popup  js-login-popup">
+    <div class="popup__layer">
+        <div class="popup__wrap">
+            <header class="popup__header">
+                <a href="javascript:void(0)" class="popup__close js-popup-close"><span class="icon close-btn"></span></a>
             </header>
-            <section class="pop-up__body">
-                <div class="pop-up__title">Вход</div>
-                <form class="reg-pop-up__form" action="/user/registration" method="POST">
+            <section class="popup__body">
+                <div class="popup__title">Вход</div>
+                <form action="/user/registration" method="POST">
                     <div class="form-group">
                         <div class="control-input__group">
                             <input type="text" id="login_input" class="control-input error" autocomplete="off" name="client[phone]" placeholder="Номер телефона*" />
@@ -104,37 +93,37 @@
                         </div>
                     </div>
                     <div class="form-group form-group--forgot">
-                        <a href="javascript:void(0)" class="js-glpopup-open " data-targetpopup=".js-password-reminder-popup">Забыли пароль?</a>
+                        <a href="javascript:void(0)" class="js-glpopup-open darkgrey" data-targetpopup=".js-password-reminder-popup">Забыли пароль?</a>
                     </div>
                     <div class="form-group form-group--btns">
-                        <a href="javascript:void(0);" class="btn btn--primary btn--big">Войти</a>
+                        <a href="javascript:void(0);" class="btn btn--primary btn--big btn--w100">Войти</a>
                     </div>
                 </form>
-                <div class="pop-up__note reg-pop-up__note">
-                    <p class="darkgrey textsmall">Нет аккаунта? <a href="javascript:void(0)" class="js-glpopup-open" data-targetpopup=".js-reg-popup-quick">Зарегистрироваться</a></p>
+                <div class="popup__note">
+                    <p class="grey4 textsmall">Нет аккаунта? <a href="javascript:void(0)" class="js-glpopup-open darkgrey" data-targetpopup=".js-reg-popup-quick">Зарегистрироваться</a></p>
                 </div>
             </section>
         </div>
     </div>
 </div>
-<div class="pop-up reg-pop-up js-password-reminder-popup">
-    <div class="pop-up__layer">
-        <div class="pop-up__wrap">
-            <header class="pop-up__header">
-                <a href="javascript:void(0)" class="pop-up__close js-popup-close"><span class="icon close-btn"></span></a>
+<div class="popup js-password-reminder-popup">
+    <div class="popup__layer">
+        <div class="popup__wrap">
+            <header class="popup__header">
+                <a href="javascript:void(0)" class="popup__close js-popup-close"><span class="icon close-btn"></span></a>
             </header>
-            <section class="pop-up__body">
-                <div class="pop-up__title">Восстановление пароля</div>
-                <form class="reg-pop-up__form" action="/user/registration" method="POST">
+            <section class="popup__body">
+                <div class="popup__title">Восстановление пароля</div>
+                <form class="__form" action="/user/registration" method="POST">
                     <div class="form-group">
                         <div class="control-input__group">
-                            <input type="text" id="password_forgot_input" class="control-input error" autocomplete="off" name="client[phone]" placeholder="Номер телефона*" />
+                            <input type="text" id="password_forgot_input" class="control-input" autocomplete="off" name="client[phone]" placeholder="Номер телефона*" />
                             <label class="control-input__group-label" for="password_forgot_input" data-content="Номер телефона*">Номер телефона*</label>
                             <span class="control-input__group-error control__error">Ошибка ввода информации</span>
                         </div>
                     </div>
                     <div class="form-group form-group--btns">
-                        <a href="javascript:void(0);" class="btn btn--primary btn--big js-glpopup-open" data-targetpopup=".js-password-reminder-popup-success">Восстановить</a>
+                        <a href="javascript:void(0);" class="btn btn--primary btn--big btn--w100 js-glpopup-open " data-targetpopup=".js-password-reminder-popup-success">Восстановить</a>
                     </div>
                 </form>
             </section>

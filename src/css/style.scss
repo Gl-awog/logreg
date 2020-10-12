@@ -2,7 +2,7 @@
 @import 'abstracts/mixins';
 
 @import 'base/reset';
-@import 'base/fonts';
+// @import 'base/fonts';
 @import 'base/typography';
 @import 'base/utils';
 @import 'base/general';
@@ -16,10 +16,10 @@
 @import 'components/input';
 @import 'components/popup';
 
-@import 'layout/page';
-@import 'layout/header';
+// @import 'layout/page';
+// @import 'layout/header';
 // @import 'layout/nav';
-@import 'layout/footer';
+// @import 'layout/footer';
 @import 'layout/main';
 
 @import 'pages/customization';

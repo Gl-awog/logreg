@@ -83,15 +83,13 @@ input[type="radio"] {
     background-size: 40px 40px;
 }*/
 
-/*input[type="text"],
-input[type="email"],
-input[type="password"],*/
+
 input[type="text"].control-input,
 input[type="password"].control-input,
 input[type="number"].control-input,
 input[type="tel"].control-input,
 input[type="email"].control-input {
-    background-color: #222222;
+    background-color: #ffffff;
     background-repeat: no-repeat;
     display: inline-block;
     box-sizing: border-box;
@@ -100,7 +98,7 @@ input[type="email"].control-input {
     @include font-main;
     border-radius: 4px;
     box-shadow: none;
-    color: #ffffff;
+    color: #737373;
     padding: 13px 11px 12px;
     border: 1px solid transparent;
     outline: none;
@@ -126,7 +124,7 @@ input[type="email"].control-input {
 
     &:focus {
         box-shadow: none;
-        border-color: #303030;
+        border-color: #a3a3a3;
 
         &::-webkit-input-placeholder {
             color: transparent;
@@ -380,12 +378,12 @@ input[type="email"].control-input {
 
     &__input:checked {
         &+label:before {
-            border-color: #ffdb00;
+            border-color: #737373;
         }
 
         &+label:after {
             opacity: 1;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='%23FFD000' fill-rule='evenodd' d='M9.614.386a1.311 1.311 0 0 0-1.858 0L3.333 4.82l-1.09-1.091a1.311 1.311 0 0 0-1.858 0 1.32 1.32 0 0 0 0 1.863l2.019 2.023a1.311 1.311 0 0 0 1.859 0L9.614 2.25a1.318 1.318 0 0 0 0-1.864'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='%23737373' fill-rule='evenodd' d='M9.614.386a1.311 1.311 0 0 0-1.858 0L3.333 4.82l-1.09-1.091a1.311 1.311 0 0 0-1.858 0 1.32 1.32 0 0 0 0 1.863l2.019 2.023a1.311 1.311 0 0 0 1.859 0L9.614 2.25a1.318 1.318 0 0 0 0-1.864'/%3E%3C/svg%3E");
         }
     }
 
